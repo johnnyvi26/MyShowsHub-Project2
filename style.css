@@ -1,0 +1,12 @@
+  body {
+    text-align: center;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapercave.com%2Faction-anime-series-poster-wallpapers&psig=AOvVaw0p18MSM37Lr84O0awEuNkQ&ust=1633744751288000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKjlt87bufMCFQAAAAAdAAAAABAG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:rgb(29, 28, 26);
+}
+
+h1 {
+    size: 60px;
+}

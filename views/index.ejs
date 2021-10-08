@@ -12,21 +12,21 @@
     <h1>My Shows Hub</h1>
     <nav>
         <ul>
-            <li><a href="/shows">Home Page</a></li>
-            <li><a href="/shows/allShows">Anime List</a></li>
-            <li><a href="/shows/new">Add Anime</a></li>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/allShows">Anime List</a></li>
+            <li><a href="/new">Add Anime</a></li>
         </ul>
     </nav>
     <h1>My Reading List</h1>
     <ul>
         <% shows.forEach(show=> {%>
             <li>
-                <a href="/shows/<%= show._id %>"><%= show.title %></a>
-                <form action="/shows/<%= show._id %>?_method=DELETE" method="POST"
+                <a href="/<%= show._id %>"><%= show.title %></a>
+                <form action="/<%= show._id %>?_method=DELETE" method="POST"
                     style="display: inline; margin-left: 15px;">
                     <input type="submit" value="DELETE" />
                 </form>
-                <a href="/shows/<%=show._id %>/edit">Edit</a>
+                <a href="/<%=show._id %>/edit">Edit</a>
 
             </li>
         <% }) %>
