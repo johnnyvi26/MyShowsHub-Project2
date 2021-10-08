@@ -15,7 +15,7 @@ const db = mongoose.connection;
 
 //body parser middleware: give us access to req.body
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.static('public'));
 
 //methodOverride
 app.use(methodOverride('_method'));

@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('./partials/headTag.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyShowsHub</title>
-</head>
+    <body>
+        <h1>My Shows Hub</h1>
 
-<body>
-    <h1>My Shows Hub</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home Page</a></li>
-            <li><a href="/allShows">Anime List</a></li>
-            <li><a href="/new">Add Anime</a></li>
-        </ul>
-    </nav>
-    <h1>My Reading List</h1>
-    <ul>
-        <% shows.forEach(show=> {%>
-            <li>
-                <a href="/<%= show._id %>"><%= show.title %></a>
-                <form action="/<%= show._id %>?_method=DELETE" method="POST"
-                    style="display: inline; margin-left: 15px;">
-                    <input type="submit" value="DELETE" />
-                </form>
-                <a href="/<%=show._id %>/edit">Edit</a>
+        <%- include('./partials/navBar.ejs') %>
 
-            </li>
-        <% }) %>
-    </ul>
-    <footer>
-        <a href="https://animixplay.to/">Watch your favorite anime Here!</a>
-    </footer>
-</body>
+            <h1>My Reading List</h1>
+            <div class="col-s12-m5">
+
+                <div class="cart">
+
+                    <ul>
+                        <% shows.forEach(show=> {%>
+                            <li>
+                                <a href="/<%= show._id %>">
+                                    <%= show.title %>
+                                </a>
+                                <form action="/<%= show._id %>?_method=DELETE" method="POST"
+                                    style="display: inline; margin-left: 15px;">
+                                    <input type="submit" value="DELETE" />
+                                </form>
+                                <a href="/<%=show._id %>/edit">Edit</a>
+
+                            </li>
+                            <% }) %>
+                    </ul>
+                    
+                </div>
+
+            </div>
+
+            <footer>
+                <a href="https://animixplay.to/">Watch your favorite anime Here!</a>
+            </footer>
+
+    </body>
 
 </html>
