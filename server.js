@@ -48,13 +48,13 @@ app.get('/shows', (req, res)=>{
 });
 
 // Index - display all .....
-// app.get('/shows/allShows', (req, res) => {
-//     Show.find({}, (error, allShows) => {
-//         res.render('index.ejs', {
-//             shows: allShows,
-//         });
-//     });
-// });
+app.get('/shows/allShows', (req, res) => {
+    Show.find({}, (error, allShows) => {
+        res.render('index.ejs', {
+            shows: allShows,
+        });
+    });
+});
 
 // New - display form to add a new .....
 app.get('/shows/new', (req, res) => {
@@ -63,30 +63,49 @@ app.get('/shows/new', (req, res) => {
 
 
 // Delete - delete a single ....
-
+app.delete('/shows/:id', (req, res) => {
+    Show.findByIdAndRemove(req.params.id, (error, deletedShow) => {
+        res.redirect('/shows/allShows');
+    });
+});
 
 // Update - update a single ..
-
+app.put('/shows/:id', (req, res) => {
+    Show.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true },
+        (error, updatedShow) => {
+            res.redirect(`/shows/${req.params.id}`);
+        }
+    );
+});
 
 
 // Create - create a new ...
 app.post('/shows/new', (req, res) => {
     Show.create(req.body, (error, createShow) => {
-        res.send(createShow);
+        res.redirect('/shows/allShows');
     });
 });
 
 // // Edit - display form to update a ....
-// app.get('/shows/:id/edit', (req, res) => {
-//     Show.findById(req.params.id, (error, foundShow) => {
-//         res.render('edit.ejs', {
-//             show: foundShow
-//         });
-//     });
-// });
+app.get('/shows/:id/edit', (req, res) => {
+    Show.findById(req.params.id, (error, foundShow) => {
+        res.render('edit.ejs', {
+            show: foundShow,
+        });
+    });
+});
 
 // Show - display a single 
-
+app.get('/shows/:id', (req, res) => {
+    Show.findById(req.params.id, (error, foundShow) => {
+        res.render('show.ejs', {
+            show: foundShow,
+        });
+    });
+});
 
 
 //////////////////////////////////////////////////////////////

@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyShowsHub</title>
+    <title>New Show</title>
 </head>
+
 <body>
     <h1>My Shows Hub</h1>
     <nav>
         <ul>
+            <li><a href="/shows">Home Page</a></li>
             <li><a href="/shows/allShows">Anime List</a></li>
             <li><a href="/shows/new">Add Anime</a></li>
         </ul>
     </nav>
-    
-    <h1>Welcome to My Shows Hub!</h1>
 
+    <h2>New Show</h2>
+
+        Title: <%= show.title %> <br/ >
+        Description: <%=  show.description %> <br />
+        Sources: <%= show.sources %> <br />
+    <br />
+    <br />
+    <br />
     <footer>
         <a href="https://animixplay.to/">Watch your favorite anime Here!</a>
     </footer>
+
 </body>
+
 </html>

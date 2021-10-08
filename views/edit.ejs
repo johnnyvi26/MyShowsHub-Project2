@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyShowsHub</title>
+    <title>New Show</title>
 </head>
 
 <body>
@@ -17,23 +17,22 @@
             <li><a href="/shows/new">Add Anime</a></li>
         </ul>
     </nav>
-    <h1>My Reading List</h1>
-    <ul>
-        <% shows.forEach(show=> {%>
-            <li>
-                <a href="/shows/<%= show._id %>"><%= show.title %></a>
-                <form action="/shows/<%= show._id %>?_method=DELETE" method="POST"
-                    style="display: inline; margin-left: 15px;">
-                    <input type="submit" value="DELETE" />
-                </form>
-                <a href="/shows/<%=show._id %>/edit">Edit</a>
 
-            </li>
-        <% }) %>
-    </ul>
+    <h2>New Show</h2>
+
+    <form form action="/shows/<%= show._id %>?_method=PUT" method="POST">
+        Title: <input type="text" name="title" value="<%= show.title %>" /><br />
+        Description: <input type="text" name="description" value="<%= show.description %>" /><br />
+        Sources: <input type="text" name="sources" value="<%= show.sources %>" /><br />
+        <input type="submit" name="" value="Submit Changes" />
+    </form>
+    <br />
+    <br />
+    <br />
     <footer>
         <a href="https://animixplay.to/">Watch your favorite anime Here!</a>
     </footer>
+
 </body>
 
 </html>
