@@ -4,8 +4,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color:rgb(236, 182, 72);
+    color:rgb(196, 168, 159);
 }
+
 
 h1, h2 {
     size: 60px;
@@ -34,4 +35,8 @@ li {
 
 footer {
   color: blueviolet;
+}
+
+h3 {
+  color: rgb(204, 171, 63);
 }
