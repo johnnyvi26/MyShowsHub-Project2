@@ -23,8 +23,9 @@ MyShowsHub is a app where you're able to read about your favorite anime and stre
 
 # Screen Shots
 
-![Screen Shot 2021-10-26 at 11 38 56 PM](https://user-images.githubusercontent.com/82793235/138996097-16eab90d-d689-42a9-926d-334cf53ceac4.png)
-![Screen Shot 2021-10-26 at 11 39 22 PM](https://user-images.githubusercontent.com/82793235/138996099-2f82cb02-6068-4e9d-8a8e-e33c775b0d4d.png)
+![Screen Shot 2021-10-08 at 2 14 51 AM](https://user-images.githubusercontent.com/82793235/136507568-2031052e-1f9c-4ca1-ade9-0ae3bdb44a2e.png)
+![Screen Shot 2021-10-08 at 2 15 18 AM](https://user-images.githubusercontent.com/82793235/136507570-da3595c2-b5d1-4497-b009-cb369d803a24.png)
+![Screen Shot 2021-10-08 at 2 14 24 AM](https://user-images.githubusercontent.com/82793235/136507573-485f1252-0edf-4dcb-83e4-10b3cdef4222.png)
 
 
 
